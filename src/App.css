@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-initials {
+  background-color: pink;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.header-text {
+  font-size: 24px;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.add-task-button {
+  background-color: blue;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task-section {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-item input {
+  margin-right: 10px;
+}
+
+.task-name {
+  flex-grow: 1;
+}
+
+.task-date {
+  color: grey;
+  margin-left: 10px;
+}
+
+.task-project {
+  background-color: lightgrey;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.add-task, .add-section-button {
+  color: blue;
+  cursor: pointer;
+}
+
+.add-task-button, .add-section-button {
+  display: inline-block;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content label {
+  margin-bottom: 10px;
+}
+
+.add-task-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-task-button:hover {
+  background-color: #0056b3;
+}
+
+/* Priority Styling */
+.task-priority {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  color: white; /* Default text color */
+}
+
+.priority-low {
+  background-color: green;
+}
+
+.priority-medium {
+  background-color: orange;
+}
+
+.priority-high {
+  background-color: red;
 }
